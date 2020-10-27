@@ -19,7 +19,7 @@
 ################################################################################################################
 
 # Base Image
-FROM s390x/ubuntu:18.04 as builder
+FROM quay.io/ibmz/ubuntu:18.04 as builder
 
 ARG GRAFANA_VER=7.0.5
 
@@ -75,7 +75,7 @@ RUN apt-get update -y && apt-get install -y \
 
 # Build a fresh image without all the build requirements
 
-FROM s390x/ubuntu:18.04
+FROM quay.io/ibmz/ubuntu:18.04 
 
 RUN apt-get update -y 
 
