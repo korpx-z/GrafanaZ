@@ -65,6 +65,7 @@ RUN apt-get update -y && apt-get install -y \
 # Build frontend and edit configuration
  && cd $GOPATH/src/github.com/grafana/grafana \
  && make deps-js \
+ && yarn upgrade \
  && make build-js \
  && sed -i "s/^server_url.*/server_url\ =\ http:\/\/localhost:8081\/render/" $GOPATH/src/github.com/grafana/grafana/conf/defaults.ini \
  && sed -i "s/^callback_url.*/callback_url\ =\ http:\/\/localhost:3000/" $GOPATH/src/github.com/grafana/grafana/conf/defaults.ini \
