@@ -11,7 +11,5 @@ echo -e "\n $ANSI_YELLOW *** FUNCTIONAL TEST(S) *** $ANSI_RESET \n"
 echo -e "$ANSI_YELLOW Activate the Elasticsearch container: $ANSI_RESET"
 docker network create grafanatest
 docker run --rm -d --name grafana --network grafanatest -p 3000:3000 quay.io/ibmz/grafana:7.0.5
-docker stop grafana
-docker network rm somenetwork
 
 echo -e "\n $ANSI_GREEN *** FUNCTIONAL TEST(S) COMPLETED SUCESSFULLY *** $ANSI_RESET \n"
