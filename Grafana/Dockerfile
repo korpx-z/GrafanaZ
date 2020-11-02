@@ -56,6 +56,7 @@ RUN apt-get update -y && apt-get install -y \
 # Install yarn
  && npm install -g yarn \
  && yarn upgrade \
+ && npm i react \
 # Build Grafana-image-renderer
  && cd $GOPATH/src/github.com/grafana \
  && git clone https://github.com/grafana/grafana-image-renderer.git \
