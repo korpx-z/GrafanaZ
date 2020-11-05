@@ -55,8 +55,9 @@ RUN apt-get update -y && apt-get install -y \
  && make build-go \
 # Install yarn
  && npx npm-force-resolutions \
+ && npm install -g resolutions \
  && npm install -g yarn \
- && yarn upgrade
+ && yarn upgrade \
 # Build Grafana-image-renderer
  && cd $GOPATH/src/github.com/grafana \
  && git clone https://github.com/grafana/grafana-image-renderer.git \
