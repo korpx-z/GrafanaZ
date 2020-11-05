@@ -54,6 +54,8 @@ RUN apt-get update -y && apt-get install -y \
  && make deps-go \
  && make build-go \
 # Install yarn
+ && npx npm-force-resolutions \
+ && npm install -g npm-force-resolutions \
  && npm install -g yarn \
  && yarn upgrade
 # Build Grafana-image-renderer
