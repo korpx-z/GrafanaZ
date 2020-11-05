@@ -54,10 +54,13 @@ RUN apt-get update -y && apt-get install -y \
  && make deps-go \
  && make build-go \
 # Install yarn
- && npx npm-force-resolutions \
- && npm install -g resolutions \
  && npm install -g yarn \
  && yarn upgrade \
+ && npm install -g react \
+ && npx npm-force-resolutions \
+ && npm install -g resolutions \
+ && echo "DEBUG LINE 0" \
+ && npm install --save-dev @babel/plugin-proposal-class-properties \
 # Build Grafana-image-renderer
  && cd $GOPATH/src/github.com/grafana \
  && git clone https://github.com/grafana/grafana-image-renderer.git \
