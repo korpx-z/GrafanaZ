@@ -59,7 +59,8 @@ RUN apt-get update -y && apt-get install -y \
  && npm install -g react \
  && npm install -g --save-dev @babel/core @babel/node \
  && npm install -g --save-dev @babel/preset-env \
-&& npm install --save-dev @babel/plugin-proposal-class-properties \
+ && echo "DEBUG LINE 0" \
+ && npm install --save-dev @babel/plugin-proposal-class-properties \
 # Build Grafana-image-renderer
  && cd $GOPATH/src/github.com/grafana \
  && git clone https://github.com/grafana/grafana-image-renderer.git \
