@@ -57,8 +57,8 @@ RUN apt-get update -y && apt-get install -y \
  && npm install -g yarn \
  && yarn upgrade \
  && npm install -g react \
- && npm install -g --save-dev @babel/core @babel/node \
- && npm install -g --save-dev @babel/preset-env \
+ && npx npm-force-resolutions \
+ && npm install -g resolutions \
  && echo "DEBUG LINE 0" \
  && npm install --save-dev @babel/plugin-proposal-class-properties \
 # Build Grafana-image-renderer
